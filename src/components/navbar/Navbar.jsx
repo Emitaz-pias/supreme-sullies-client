@@ -196,10 +196,10 @@ const Navbar = (props) => {
   );
 
   return (
-    <Box id="back-to-top-anchor" sx={{ flexGrow: 1 }}>
+    <Box  id="back-to-top-anchor" sx={{ flexGrow: 1 }}>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar sx={{ backgroundColor: '#fff' }}>
+        <AppBar position="static" sx={{ backgroundColor: '#fff' }}>
           <Toolbar>
             <IconButton
               size="large"
@@ -246,7 +246,6 @@ const Navbar = (props) => {
         </Fab>
       </ScrollTop>
       {renderMobileMenu}
-      xxx
     </Box>
   );
 }
