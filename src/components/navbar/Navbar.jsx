@@ -1,35 +1,31 @@
 import * as React from 'react';
-import { styled, alpha } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
-import AccountCircle from '@mui/icons-material/AccountCircle';
-import MailIcon from '@mui/icons-material/Mail';
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import MoreIcon from '@mui/icons-material/MoreVert';
-import { Container, Slide, useScrollTrigger } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
+import { Slide, useScrollTrigger } from '@mui/material';
 import PropTypes from 'prop-types';
 import CssBaseline from '@mui/material/CssBaseline';
 import Fade from '@mui/material/Fade';
 import Fab from '@mui/material/Fab';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-
+import logo from '../../images/supreme agro logo.jpg'
 
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  backgroundColor: 'lightgrey',
   '&:hover': {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
+    backgroundColor: 'grey',
   },
   marginRight: theme.spacing(2),
   marginLeft: 0,
@@ -64,7 +60,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const Navbar = (props)=> {
+const Navbar = (props) => {
   function HideOnScroll(props) {
     const { children, window } = props;
     // Note that you normally won't need to set the window ref as useScrollTrigger
@@ -73,20 +69,16 @@ const Navbar = (props)=> {
     const trigger = useScrollTrigger({
       target: window ? window() : undefined,
     });
-  
+
     return (
       <Slide appear={false} direction="down" in={!trigger}>
         {children}
       </Slide>
     );
   }
-  
+
   HideOnScroll.propTypes = {
     children: PropTypes.element.isRequired,
-    /**
-     * Injected by the documentation to work in an iframe.
-     * You won't need it on your project.
-     */
     window: PropTypes.func,
   };
   function ScrollTop(props) {
@@ -97,13 +89,13 @@ const Navbar = (props)=> {
       disableHysteresis: true,
       threshold: 100,
     });
-  
+
     const handleClick = (event) => {
-    console.log('topped');
+      console.log('topped');
       const anchor = (event.target.ownerDocument || document).querySelector(
         '#back-to-top-anchor',
       );
-  
+
       if (anchor) {
         anchor.scrollIntoView({
           block: 'center',
@@ -111,7 +103,7 @@ const Navbar = (props)=> {
         });
       }
     };
-  
+
     return (
       <Fade in={trigger}>
         <Box
@@ -124,21 +116,17 @@ const Navbar = (props)=> {
       </Fade>
     );
   }
-  
+
   ScrollTop.propTypes = {
     children: PropTypes.element.isRequired,
     window: PropTypes.func,
   };
-  
-  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const [ anchorEl,setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
-  const isMenuOpen = Boolean(anchorEl);
+  // const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-
-  const handleProfileMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
 
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
@@ -151,10 +139,10 @@ const Navbar = (props)=> {
 
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
+    
   };
 
-  const menuId = 'primary-search-account-menu';
-  
+
 
   const mobileMenuId = 'primary-search-account-menu-mobile';
   const renderMobileMenu = (
@@ -173,108 +161,84 @@ const Navbar = (props)=> {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
+      <Box sx={{display:'flex',justifyContent:'end',padding:'0.1em'}} onClick={handleMenuClose}><CloseIcon/></Box>
       <MenuItem >
-        <IconButton size="large" aria-label="show 5 new mails" color="inherit">
-          <Badge badgeContent={5} color="error">
-            <MailIcon />
-          </Badge>
+        <IconButton size="small" >
+          About Us
         </IconButton>
-        <p>Messages</p>
       </MenuItem>
       <MenuItem>
-        <IconButton
-          size="large"
-          aria-label="show 17 new notifications"
-          color="inherit"
-        >
-          <Badge badgeContent={17} color="error">
-            <NotificationsIcon />
-          </Badge>
+        <IconButton size="small">
+          Accessories
         </IconButton>
-        <p>Notifications</p>
+      </MenuItem>
+      <MenuItem>
+        <IconButton size="small">
+          Agro
+        </IconButton>
+      </MenuItem>
+      <MenuItem>
+        <IconButton size="small">
+          Distribution
+        </IconButton>
+      </MenuItem>
+      <MenuItem>
+        <IconButton size="small">
+          It
+        </IconButton>
+      </MenuItem>
+      <MenuItem>
+        <IconButton size="small">
+          Garments
+        </IconButton>
       </MenuItem>
     </Menu>
   );
 
   return (
     <Box id="back-to-top-anchor" sx={{ flexGrow: 1 }}>
- <CssBaseline />
+      <CssBaseline />
       <HideOnScroll {...props}>
-      <AppBar>
-        <Toolbar sx={{border:'1px solid red'}} >
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ display: { xs: 'none', sm: 'block' } }}
-          >
-            MUI
-          </Typography>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
-          <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="error">
-                <MailIcon />
-              </Badge>
-            </IconButton>
+        <AppBar sx={{ backgroundColor: '#fff' }}>
+          <Toolbar>
             <IconButton
               size="large"
-              aria-label="show 17 new notifications"
-              color="inherit"
-            >
-              <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
-          </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="show more"
+              edge="start"
+              aria-label="open drawer"
               aria-controls={mobileMenuId}
               aria-haspopup="true"
               onClick={handleMobileMenuOpen}
-              color="inherit"
+              sx={{ mr: 2 }}
             >
-              <MoreIcon />
+              <MenuIcon />
             </IconButton>
-          </Box>
-        </Toolbar>
-      <ScrollTop {...props}>
-        <Fab size="small" aria-label="scroll back to top">
-          <KeyboardArrowUpIcon />
-        </Fab>
-      </ScrollTop>
-      </AppBar>
+
+            <Typography
+              variant="h3"
+              Wrap
+              component="div"
+            >
+              <img style={{ width: '2em', height: '2em',marginRight:'0.5em' }} src={logo} alt="logo" />
+            </Typography>
+            <Search>
+              <SearchIconWrapper>
+                <SearchIcon />
+              </SearchIconWrapper>
+              <StyledInputBase
+                placeholder="Search"
+                inputProps={{ 'aria-label': 'search' }}
+              />
+            </Search>
+            <Box sx={{ display: { xs: 'none', md: 'flex',color:'grey' } }}>
+              <MenuItem >  About Us </MenuItem>
+              <MenuItem>   Accessories </MenuItem>
+              <MenuItem>  Agro  </MenuItem>
+              <MenuItem> Distribution     </MenuItem>
+              <MenuItem>  It </MenuItem>
+              <MenuItem> Garments </MenuItem>
+            </Box>
+          </Toolbar>
+        </AppBar>
       </HideOnScroll>
       <ScrollTop {...props}>
         <Fab size="small" aria-label="scroll back to top">
@@ -282,6 +246,7 @@ const Navbar = (props)=> {
         </Fab>
       </ScrollTop>
       {renderMobileMenu}
+      xxx
     </Box>
   );
 }
