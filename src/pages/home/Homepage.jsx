@@ -8,9 +8,12 @@ import slider2 from '../../images/slider2.jpg';
 import slider3 from '../../images/slider3.jpg';
 import slider4 from '../../images/slider4.jpg';
 import slider5 from '../../images/slider5.jpg';
-import { Box } from '@mui/material';
+import { Box, Button, Grid, Typography } from '@mui/material';
 import BlogCard from '../../components/card/Card';
-
+import fimgae1 from '../../images/featured image1.jpeg'
+import fimgae2 from '../../images/featured image2.jpg'
+import "./Homepage.css"
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const Homepage = () => {
     const settings = {
@@ -32,11 +35,40 @@ const Homepage = () => {
         <img src={slider5} alt="slider 5" />
       </Slider>
     </Box>
-    <Box sx={{display:'inline-flex',flexGrow:'1'}}>
+    <Box  sx={{display:'inline-flex',flexWrap:'wrap',justifyContent:'center'}}>
     <BlogCard/>
     <BlogCard/>
     <BlogCard/>
     </Box>
+      <Box sx={{textAlign:'center',padding:'0.2em'}}>
+        <Typography variant='h4'>Featured Highligts</Typography>
+      <Grid container columnSpacing={1} spaceing={{ xs:1,md:1,lg:1 }}>
+      <Grid item xs={12} md={5} lg={6}>
+          <Box className="animated-card" sx={{}}>
+          <img className='featuredImage' src={fimgae2} alt="fimage" />
+          <Typography variant='h6' fontWeight={'bold'}>Supreme Group 2023 Full Years Result</Typography>
+          <Typography component="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, voluptatem.</Typography>
+          <Button className='read-more' size="small">
+          <span className="read-more-text">Read More</span>
+          <span className="read-more-icon"><ArrowForwardIcon/></span> 
+      
+        </Button>    
+          </Box>
+        </Grid>
+        <Grid item xs={12} md={5} lg={6}>
+          <Box className="animated-card">
+            <img className='featuredImage' src={fimgae1} alt="fimage" />
+            <Typography variant='h6' fontWeight={'bold'}>Paraquat:An imporant Herbicide</Typography>
+          <Typography component="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, voluptatem.</Typography>
+          <Button className='read-more' size="small">
+          <span className="read-more-text">Read More</span>
+          <span className="read-more-icon"><ArrowForwardIcon/></span> 
+      
+        </Button>    
+          </Box>
+        </Grid>
+      </Grid>
+      </Box>
        </Layout>
     );
 };

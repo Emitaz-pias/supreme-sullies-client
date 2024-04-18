@@ -3,32 +3,36 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
+import { Button, CardActionArea } from '@mui/material';
+import cardImage1 from '../../images/cardImage1.jpg'
+// import cardImage2 from '../../images/cardImage2.jpg'
+// import cardImage3 from '../../images/cardImage3.jpg'
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import './Card.css'
 const BlogCard = ()=> {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card className="animated-card" sx={{ maxWidth: 345 }}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
+          image={cardImage1}
           alt="green iguana"
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Lizard
+        <CardContent className="card-content">
+          <Typography sx={{color:'#424242',fontWeight:'bold'}} gutterBottom variant="h5" component="div">
+            Crop Protection
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+          <Typography  gutterBottom component="p">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae doloribus voluptatibus unde excepturi, eius nesciunt!
           </Typography>
+          <Button className='read-more' size="small">
+          <span className="read-more-text">Read More</span>
+          <span className="read-more-icon"><ArrowForwardIcon/></span> 
+      
+        </Button>          
         </CardContent>
+        
       </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-      </CardActions>
     </Card>
   );
 }

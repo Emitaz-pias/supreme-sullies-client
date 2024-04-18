@@ -1,0 +1,53 @@
+.animated-card {
+    position: relative;
+    height:75vh;
+    background-color: transparent;
+  }
+  
+  .card-image {
+    transition: transform 0.5s ease-out;
+  }
+  
+  .card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    transform: translateY(120%);
+    transition: transform 0.5s ease-out;
+  }
+  
+  .animated-card:hover .card-image {
+    transform: translateY(0); /* Lift the image up a bit */
+  }
+  
+  .animated-card:hover .card-content {
+    transform: translateY(75%); /* Move the content back to its original position */
+  }
+  .read-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease-out;
+}
+
+.read-more-text {
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Initially hidden */
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+.read-more-icon {
+    margin-right: 5em; /* Spacing between icon and text */
+    transition: transform 0.5s ease-out;
+}
+
+.animated-card:hover .read-more-text {
+    opacity: 1; /* Show the text */
+    visibility: visible; /* Show the text */
+}
+
+.animated-card:hover .read-more-icon {
+    transform: translateX(4em); /* Move the icon a bit to the left */
+}

@@ -122,7 +122,7 @@ const Navbar = (props) => {
     window: PropTypes.func,
   };
 
-  const [ anchorEl,setAnchorEl] = React.useState(null);
+  const [setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
   // const isMenuOpen = Boolean(anchorEl);
