@@ -57,8 +57,8 @@ const Homepage = () => {
         <Grid item xs={12} md={5} lg={6}>
           <Box className="animated-card">
             <img className='featuredImage' src={fimgae1} alt="fimage" />
-            <Typography variant='h6' fontWeight={'bold'}>Paraquat:An imporant Herbicide</Typography>
-          <Typography component="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, voluptatem.</Typography>
+            <Typography variant='h6' fontWeight={'bold'}>Vision of supreme</Typography>
+          <Typography component="p">To empower our customers to achieve their goals by providing them with the superior supplies and support they need to succeed.</Typography>
           <Button className='read-more' size="small">
           <span className="read-more-text">Read More</span>
           <span className="read-more-icon"><ArrowForwardIcon/></span> 
