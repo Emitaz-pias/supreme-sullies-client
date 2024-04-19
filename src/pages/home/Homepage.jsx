@@ -2,11 +2,11 @@ import React from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import slider1 from '../../images/Slider1.jpg';
-import slider2 from '../../images/Slider2.jpg';
-import slider3 from '../../images/Slider3.jpg';
-import slider4 from '../../images/Slider4.jpg';
-import slider5 from '../../images/Slider5.jpg';
+import slider1 from '../../images/slider1.jpg';
+import slider2 from '../../images/slider2.jpg';
+import slider3 from '../../images/slider3.jpg';
+import slider4 from '../../images/slider4.jpg';
+import slider5 from '../../images/slider5.jpg';
 import { Box, Button, Grid, Typography } from '@mui/material';
 import BlogCard from '../../components/card/Card';
 import fimgae1 from '../../images/featured image1.jpeg'
