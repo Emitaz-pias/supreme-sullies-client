@@ -18,6 +18,7 @@ import Fade from '@mui/material/Fade';
 import Fab from '@mui/material/Fab';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import logo from '../../images/supreme agro logo.jpg'
+import { Link } from 'react-router-dom';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -122,7 +123,7 @@ const Navbar = (props) => {
     window: PropTypes.func,
   };
 
-  const [setAnchorEl] = React.useState(null);
+  const [anchorEl,setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
   // const isMenuOpen = Boolean(anchorEl);
@@ -163,34 +164,31 @@ const Navbar = (props) => {
     >
       <Box sx={{display:'flex',justifyContent:'end',padding:'0.1em'}} onClick={handleMenuClose}><CloseIcon/></Box>
       <MenuItem >
-        <IconButton size="small" >
-          About Us
-        </IconButton>
+          <Link style={{textDecoration:"none",color:'black'}} to ='/about-us'>
+            About Us
+          </Link>
       </MenuItem>
       <MenuItem>
-        <IconButton size="small">
-          Accessories
-        </IconButton>
+
+        <Link style={{textDecoration:"none",color:'black'}} to ='/accessories'>
+        Accessories
+        </Link>
+
       </MenuItem>
       <MenuItem>
-        <IconButton size="small">
-          Agro
-        </IconButton>
+
+        <Link style={{textDecoration:"none",color:'black'}} to='/agro'>Agro</Link>
+
       </MenuItem>
       <MenuItem>
-        <IconButton size="small">
-          Distribution
-        </IconButton>
+
+        <Link style={{textDecoration:"none",color:'black'}} to='/IT'>IT</Link>
+
       </MenuItem>
       <MenuItem>
-        <IconButton size="small">
-          It
-        </IconButton>
-      </MenuItem>
-      <MenuItem>
-        <IconButton size="small">
-          Garments
-        </IconButton>
+
+        <Link style={{textDecoration:"none" ,color:'black'}} to='/garments'>Garments</Link>  
+
       </MenuItem>
     </Menu>
   );
@@ -215,10 +213,11 @@ const Navbar = (props) => {
 
             <Typography
               variant="h3"
-              Wrap
               component="div"
             >
+              <Link style={{textDecoration:"none" ,color:'black'}} to='/'>
               <img style={{ width: '2em', height: '2em',marginRight:'0.5em' }} src={logo} alt="logo" />
+              </Link>
             </Typography>
             <Search>
               <SearchIconWrapper>
@@ -230,12 +229,11 @@ const Navbar = (props) => {
               />
             </Search>
             <Box sx={{ display: { xs: 'none', md: 'flex',color:'grey' } }}>
-              <MenuItem >  About Us </MenuItem>
-              <MenuItem>   Accessories </MenuItem>
-              <MenuItem>  Agro  </MenuItem>
-              <MenuItem> Distribution     </MenuItem>
-              <MenuItem>  It </MenuItem>
-              <MenuItem> Garments </MenuItem>
+              <MenuItem >    <Link  style={{textDecoration:"none",color:'black'}} to='/about-us'>About Us</Link>   </MenuItem>
+              <MenuItem>     <Link style={{textDecoration:"none",color:'black'}} to='/accessories'>Accessories</Link>   </MenuItem>
+              <MenuItem>    <Link style={{textDecoration:"none",color:'black'}} to='/agro'>Agro</Link>    </MenuItem>             
+              <MenuItem>    <Link style={{textDecoration:"none",color:'black'}} to='/IT'>IT</Link>  </MenuItem>
+              <MenuItem>   <Link  style={{textDecoration:"none",color:'black'}}to='/garments'>Garments</Link>   </MenuItem>
             </Box>
           </Toolbar>
         </AppBar>

@@ -1,11 +1,10 @@
 import './App.css';
-import Homepage from './pages/home/Homepage';
+import AppRoutes from './AppRoutes'
+
 
 function App() {
   return (
-    <div>
-     <Homepage/>
-    </div>
+    <AppRoutes/>
   );
 }
 

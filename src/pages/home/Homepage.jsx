@@ -3,28 +3,30 @@ import Layout from '../../components/layout/Layout';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import slider1 from '../../images/slider1.jpg';
-import slider2 from '../../images/slider2.jpg';
-import slider3 from '../../images/slider3.jpg';
-import slider4 from '../../images/slider4.jpg';
-import slider5 from '../../images/slider5.jpg';
+import slider1 from '../../images/Slider1.jpg';
+import slider2 from '../../images/Slider2.jpg';
+import slider3 from '../../images/Slider3.jpg';
+import slider4 from '../../images/Slider4.jpg';
+import slider5 from '../../images/Slider5.jpg';
 import { Box, Button, Grid, Typography } from '@mui/material';
 import BlogCard from '../../components/card/Card';
 import fimgae1 from '../../images/featured image1.jpeg'
 import fimgae2 from '../../images/featured image2.jpg'
 import "./Homepage.css"
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import LogosGrid from '../../components/logoReel/LogoReels';
 
 const Homepage = () => {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
+        autoplay:true,
+        speed: 50,
         slidesToShow: 1,
         slidesToScroll: 1
       };
     return (
-       <Layout>
+     <Box>
         {/* //carousel */}
     <Box sx={{maxWidth:`100vw !important`,overflow:'hidden'}} className="slider-container">
       <Slider {...settings}>
@@ -35,9 +37,7 @@ const Homepage = () => {
         <img src={slider5} alt="slider 5" />
       </Slider>
     </Box>
-    <Box  sx={{display:'inline-flex',flexWrap:'wrap',justifyContent:'center'}}>
-    <BlogCard/>
-    <BlogCard/>
+    <Box>
     <BlogCard/>
     </Box>
       <Box sx={{textAlign:'center',padding:'0.2em'}}>
@@ -69,7 +69,11 @@ const Homepage = () => {
         </Grid>
       </Grid>
       </Box>
-       </Layout>
+      <Box>
+        <LogosGrid/>
+      </Box>
+      </Box>
+       
     );
 };
 
