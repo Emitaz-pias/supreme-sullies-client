@@ -7,6 +7,9 @@ import Accessories from './pages/accessories/Accessories.jsx';
 import Agro from './pages/agro/Agro.jsx';
 import IT from './pages/IT/IT';
 import Garments from './pages/garments/Garments';
+import Blog from './pages/blog/Blog.jsx';
+import NotFound from './pages/notFound/NotFound.jsx';
+
 
 const AppRoutes = () => {
     return (
@@ -19,6 +22,8 @@ const AppRoutes = () => {
                 <Route path="/agro" exact element={<Agro/>} />
                 <Route path="/IT" exact element={<IT/>} />
                 <Route path="/garments" exact element={<Garments/>} />
+                <Route path="/blog" exact element={<Blog/>} />
+                <Route path='/*' element={<NotFound/>}></Route>
                 </Routes>
             </Layout>
         </Router>

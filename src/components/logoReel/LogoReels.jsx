@@ -48,8 +48,8 @@ const LogosGrid = () => {
             <Typography color='#424242' textAlign={'center'} fontWeight={'bold'} variant='h3' marginBottom={'0.5em'}>Our Distributors</Typography>
             <Grid container textAlign={'center'}>
                 {logos.map((logo, index) => (
-                    <Grid item xs={6} sm={6} md={2} key={index}>
-                        <img src={logo} alt={logo} style={{ height: '160px', width: '110px' }} />
+                    <Grid backgroundColor='white' item xs={4} sm={6} md={2} key={index}>
+                        <img src={logo} alt={logo} style={{ height: '80px', width: '60px' }} />
                     </Grid>
                 ))}
             </Grid>

@@ -186,9 +186,10 @@ const Navbar = (props) => {
 
       </MenuItem>
       <MenuItem>
-
         <Link style={{textDecoration:"none" ,color:'black'}} to='/garments'>Garments</Link>  
-
+      </MenuItem>
+      <MenuItem>
+        <Link style={{textDecoration:"none" ,color:'black'}} to='/blog'>Blog</Link>  
       </MenuItem>
     </Menu>
   );
@@ -234,6 +235,7 @@ const Navbar = (props) => {
               <MenuItem>    <Link style={{textDecoration:"none",color:'black'}} to='/agro'>Agro</Link>    </MenuItem>             
               <MenuItem>    <Link style={{textDecoration:"none",color:'black'}} to='/IT'>IT</Link>  </MenuItem>
               <MenuItem>   <Link  style={{textDecoration:"none",color:'black'}}to='/garments'>Garments</Link>   </MenuItem>
+              <MenuItem>  <Link style={{textDecoration:"none" ,color:'black'}} to='/blog'>Blog</Link></MenuItem>
             </Box>
           </Toolbar>
         </AppBar>
