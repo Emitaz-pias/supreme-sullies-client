@@ -44,11 +44,11 @@ const logos = [
 
 const LogosGrid = () => {
     return (
-        <Box sx={{ flexGrow: 1, marginTop: '3em', padding: '1em', justifyContent: 'center' }}>
+        <Box sx={{ flexGrow: 1, marginTop: '3em', padding: '1em', justifyContent: 'center', }}>
             <Typography color='#424242' textAlign={'center'} fontWeight={'bold'} variant='h3' marginBottom={'0.5em'}>Our Distributors</Typography>
             <Grid container textAlign={'center'}>
                 {logos.map((logo, index) => (
-                    <Grid backgroundColor='white' item xs={4} sm={6} md={2} key={index}>
+                    <Grid backgroundColor='white' sx={{margin:'0.8em',padding:'1em',borderRadius:"0.8em"}} item xs={4} sm={6} md={2} key={index}>
                         <img src={logo} alt={logo} style={{ height: '80px', width: '60px' }} />
                     </Grid>
                 ))}
