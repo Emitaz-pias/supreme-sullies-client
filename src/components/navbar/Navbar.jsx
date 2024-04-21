@@ -17,7 +17,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Fade from '@mui/material/Fade';
 import Fab from '@mui/material/Fab';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import logo from '../../images/supreme agro logo.jpg'
+import logo from '../../images/logo.png'
 import { Link } from 'react-router-dom';
 
 
@@ -217,7 +217,7 @@ const Navbar = (props) => {
               component="div"
             >
               <Link style={{textDecoration:"none" ,color:'black'}} to='/'>
-              <img style={{ width: '2em', height: '2em',marginRight:'0.5em' }} src={logo} alt="logo" />
+              <img style={{ width: '4em', height: '2em',paddingTop:'0.2em' }} src={logo} alt="logo" />
               </Link>
             </Typography>
             <Search>
