@@ -13,7 +13,7 @@ import nestleLogo from '../../images/nestleLogo.png'
 import pandg from '../../images/pandg.png'
 import reckitt from '../../images/reckitt.png'
 import uniliverLogo from '../../images/uniliverLogo.png'
-import squaretoile from '../../images/squaretoile.png'
+import squaretoile from '../../images/suareLogo.png'
 import smcLogo from '../../images/smcLogo.png'
 import vitalac from '../../images/vitalac.png'
 

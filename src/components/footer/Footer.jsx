@@ -54,7 +54,7 @@ const Footer = () => {
   <Link to='/' style={{ margin: '0 8px',color:'white'}}>Site Map</Link>
   <Link to='/' style={{ margin: '0 8px',color:'white'}}>Home office</Link>
   <br />
-  Copyright © 2024 bro
+  Copyright © 2024
 </Typography>
         </Box>,
         
