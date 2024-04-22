@@ -62,7 +62,7 @@ const BlogCard = ()=> {
         alt={item.title}     
       />
       <CardContent className="card-content">
-        <Typography sx={{ color: '#424242', fontWeight: 'bold' }} gutterBottom variant="h5" component="div">
+        <Typography sx={{ color: '#000', fontWeight: 'bold',fontFamily:'Roboto',textTransform:'uppercase' }} gutterBottom variant="h5" component="div">
           {item.title}
         </Typography>
         <Typography gutterBottom component="p">
