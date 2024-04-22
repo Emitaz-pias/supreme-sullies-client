@@ -162,7 +162,7 @@ const Navbar = (props) => {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <Box sx={{display:'flex',justifyContent:'end',padding:'0.1em'}} onClick={handleMenuClose}><CloseIcon/></Box>
+      <Box sx={{padding:'0.1em'}} onClick={handleMenuClose}><CloseIcon/></Box>
       <MenuItem >
           <Link style={{textDecoration:"none",color:'black'}} to ='/about-us'>
             About Us

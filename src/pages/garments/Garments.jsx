@@ -27,7 +27,7 @@ const Garments = () => {
                         <Typography variant='p'>Our clothing production process adheres to the highest standards of quality and craftsmanship, ensuring that every garment that bears the Supreme Supplies BD label is of impeccable quality and durability. From fabric selection and pattern making to cutting, sewing, and finishing, we employ rigorous quality control measures at every stage of production to maintain consistency and excellence in our products.</Typography><br />
                         <Typography variant='p'>At Supreme Supplies BD, we understand the importance of sustainability and social responsibility in the garment manufacturing industry. That's why we prioritize eco-friendly practices and ethical labor standards in our operations, striving to minimize our environmental footprint and uphold the dignity and rights of our workers.</Typography><br />
                     </Box>
-                    </Box>
+        </Box>
         </section>
         <Typography variant='p'>
         In conclusion, the Garments Sector of Supreme Supplies BD is dedicated to providing comprehensive solutions that meet the diverse needs of our clients in the fashion and textile industry. Whether you're a fashion retailer looking to source quality garments or a brand seeking reliable manufacturing partners, we have the expertise and resources to help you achieve your goals. Contact us today to learn more about how we can elevate your fashion business with our exceptional services.
