@@ -45,7 +45,7 @@ const logos = [
 const LogosGrid = () => {
     return (
         <Box sx={{ flexGrow: 1, marginTop: '3em', padding: '1em', justifyContent: 'center', }}>
-            <Typography color='#424242' textAlign={'center'} fontWeight={'bold'} variant='h3' marginBottom={'0.5em'}>Our Distributors</Typography>
+            <Typography textAlign={'center'} fontWeight={'bold'} variant='h3' marginBottom={'0.5em'}>Our Distributors</Typography>
             <Grid container sx={{justifyContent:"center",alignItems:'center'}}>
                 {logos.map((logo, index) => (
                     <Grid backgroundColor='white' item xs={6} sm={6} md={2} key={index}>

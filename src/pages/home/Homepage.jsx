@@ -41,7 +41,7 @@ const Homepage = () => {
     <BlogCard/>
     </Box>
       <Box sx={{textAlign:'center',padding:'0.2em'}}>
-        <Typography variant='h4' color="#424242" fontWeight={'bold'}>Featured Highligts</Typography>
+        <Typography variant='h4' fontWeight={'bold'}>Featured Highligts</Typography>
       <Grid container columnSpacing={1} spaceing={{ xs:1,md:1,lg:1 }}>
       <Grid item xs={12} md={5} lg={6}>
           <Box className="animated-card" sx={{}}>
