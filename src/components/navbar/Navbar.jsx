@@ -123,10 +123,11 @@ const Navbar = (props) => {
     window: PropTypes.func,
   };
 
-  const [anchorEl,setAnchorEl] = React.useState(null);
+  const [,setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
   // const isMenuOpen = Boolean(anchorEl);
+  // console.log(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
   const handleMobileMenuClose = () => {
@@ -195,7 +196,7 @@ const Navbar = (props) => {
   );
 
   return (
-    <Box  id="back-to-top-anchor" sx={{ flexGrow: 1 }}>
+    <Box  id="back-to-top-anchor" sx={{ flexGrow:1 }}>
       <CssBaseline />
       <HideOnScroll {...props}>
         <AppBar position="static" sx={{ backgroundColor: '#fff' }}>
@@ -207,7 +208,7 @@ const Navbar = (props) => {
               aria-controls={mobileMenuId}
               aria-haspopup="true"
               onClick={handleMobileMenuOpen}
-              sx={{ mr: 2 }}
+              sx={{ mr:0.5 }}
             >
               <MenuIcon />
             </IconButton>
@@ -217,10 +218,10 @@ const Navbar = (props) => {
               component="div"
             >
               <Link style={{textDecoration:"none" ,color:'black'}} to='/'>
-              <img style={{ width: '4em', height: '2em',paddingTop:'0.2em' }} src={logo} alt="logo" />
+              <Box component={'img'} sx={{ width:{xs:'2em',lg:'2.8em'},paddingTop:{lg:'0.1em'}}} src={logo} alt="logo" />
               </Link>
             </Typography>
-            <Search>
+            <Search sx={{marginLeft:{xs:'1.1em'}}} >
               <SearchIconWrapper>
                 <SearchIcon />
               </SearchIconWrapper>

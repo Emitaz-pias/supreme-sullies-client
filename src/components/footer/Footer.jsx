@@ -56,9 +56,7 @@ const Footer = () => {
   <br />
   Copyright © 2024
 </Typography>
-        </Box>,
-        
-      
+        </Box>
     </footer>
   );
 };

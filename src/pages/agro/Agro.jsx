@@ -1,7 +1,6 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import fisheries from '../../images/fisheries.webp'
-import fishes from '../../images/fishes.jpg'
 import fishFood from '../../images/fishFood.jpg'
 import seeds from '../../images/seeds.jpg'
 
